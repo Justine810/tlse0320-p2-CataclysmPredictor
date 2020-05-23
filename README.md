@@ -1,6 +1,20 @@
-## Rules :
+## link :
 
-all in english
-Use Electrolize font family
-font color : rgb(89, 247, 247)
 https://frosty-payne-309908.netlify.app/
+
+## project :
+
+Second Project to the Wild Code School
+
+## Subject :
+
+Create a react app to follow the close approach-date of each NEOs by using NASA Api.
+Display them by size and miss-distance.
+
+## Technology & objectif :
+
+Handle React Js and use scrum method as teamwork.
+
+## Team :
+
+see in the application by using the link
