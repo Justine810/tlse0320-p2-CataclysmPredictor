@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GlobalContainer from '../ComponentMain/GlobalContainer';
 import './Welcome.css';
+import '../../App.css';
 
 class Welcome extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Welcome extends Component {
     const { items } = this.state;
     const { url, explanation, copyright } = items;
     return (
-      <div>
+      <div className="app">
         {showAppli ? (
           <div className="contain" style={{ backgroundImage: `url(${url})` }}>
             <div className="contenu">
