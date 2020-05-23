@@ -21,24 +21,33 @@
 }
 
 .button-block {
-  position: relative;
+  height: fit-content;
   border-radius: 12px 0 12px 0;
   border: 1px solid rgb(89, 247, 247);
   color: rgb(89, 247, 247);
   font: bold 18px Electrolize;
-  padding: 15px;
   box-shadow: 1px 1px 3px rgb(89, 247, 247);
   margin: 25px;
-  width: 200px;
-  top: -4%;
   letter-spacing: 1px;
-  grid-area: btn;
-  height: 300px;
   z-index: 5;
   opacity: 0.4;
   transition: 1s;
+  display: flex;
+  flex-direction: column;
 }
 .button-block:hover {
   opacity: 1;
   transition: 1s;
+}
+.flex {
+  display: flex;
+}
+.directionC {
+  flex-direction: column;
+}
+.menu {
+  align-self: center;
+}
+.selector {
+  align-self: flex-start;
 }

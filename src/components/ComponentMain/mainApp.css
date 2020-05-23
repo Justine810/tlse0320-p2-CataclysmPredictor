@@ -1,11 +1,11 @@
 .contentSphere {
-  margin-top: 70px;
-  margin-bottom: 70px;
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: end;
 }
 
 .sphere {
-  margin-top: 100px; /*A supprimer pour le repositionner*/
   border-radius: 50%;
   background-size: cover;
 }

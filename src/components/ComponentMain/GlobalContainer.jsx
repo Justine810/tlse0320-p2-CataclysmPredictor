@@ -12,6 +12,7 @@ import ScenariosContent from '../ComponentBottom/ScenariosContent';
 import Presentation from '../ComponentBottom/Presentation';
 import LegalMentions from '../ComponentBottom/LegalMentions';
 import './animation.css';
+import '../../App.css';
 import MainTitle from './MainTitle';
 
 class GlobalContainer extends React.Component {
