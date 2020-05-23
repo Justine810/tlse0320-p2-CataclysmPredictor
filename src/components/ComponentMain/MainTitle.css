@@ -1,9 +1,10 @@
 .mainTitle {
+  align-self: center;
+  margin: 0 auto;
   font-size: 2.3em;
   --interval: 1s;
   text-align: center;
   width: auto;
-  margin-top: 50px;
   text-shadow: 0 0 5px var(--color1), 0 0 10px var(--color2), 0 0 20px var(--color3),
     0 0 60px var(--color4);
   will-change: filter, color;
@@ -14,4 +15,7 @@
   --color3: dodgerblue;
   --color4: blue;
   text-decoration: underline;
+}
+.mainTitle h1 {
+  margin: 0;
 }

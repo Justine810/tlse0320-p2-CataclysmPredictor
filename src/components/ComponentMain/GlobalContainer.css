@@ -113,15 +113,16 @@
   width: 95%;
 }
 
-.contain-appli {
-  display: grid;
-  grid-template-columns: 270px auto 50px;
-  grid-template-areas:
-    'btn centre'
-    'footer centre';
-}
 .mainApp {
-  position: absolute;
-  top: 35%;
-  width: 98%;
+  width: 95vw;
+  height: 60vh;
+  margin-top: 5vh;
+}
+.topApp {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+  justify-content: flex-end;
+  height: 30vh;
+  grid-row: 1;
 }

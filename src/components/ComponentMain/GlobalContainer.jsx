@@ -144,54 +144,50 @@ class GlobalContainer extends React.Component {
       isDangerousChecked
     } = buttonChecked;
     return (
-      <div className="contain-appli">
-        <Router>
-          <Switch>
-            <Route path="/article-asteroide" component={ArticleContent} />
-            <Route path="/article-dinosaures" component={ScenariosContent} />
-            <Route path="/mentions-legales" component={LegalMentions} />
-            <Route path="/presentation" component={Presentation} />
-            <Route path="/">
+      <Router>
+        <Switch>
+          <Route path="/article-asteroide" component={ArticleContent} />
+          <Route path="/article-dinosaures" component={ScenariosContent} />
+          <Route path="/mentions-legales" component={LegalMentions} />
+          <Route path="/presentation" component={Presentation} />
+          <Route path="/">
+            <div className="topApp">
               <MainTitle />
               <UpButtons
                 buttonChecked={buttonChecked}
                 handleCheckedButton={this.handleCheckedButton}
               />
-              <div className="flex mainApp">
-                <MainApp />
-                {date && data ? (
-                  <div className="flex direction width scale-in-hor-center border-right">
-                    <div className="flex space-between">
-                      <p className="color">Axe de passage</p>
-                      <h2 className="colorText">
-                        Astéroïdes en approche à partir du :&#141;
-                        {date}
-                      </h2>
-                    </div>
-                    <NeoDisplay
-                      data={data}
-                      displayAlert={displayAlert}
-                      showAlert={this.showAlert}
-                    />
-                    <p className="color">Distance minimale relevée</p>
+            </div>
+            <div className="flex mainApp">
+              <MainApp />
+              {date && data ? (
+                <div className="flex direction width scale-in-hor-center border-right">
+                  <div className="flex space-between">
+                    <p className="color">Axe de passage</p>
+                    <h2 className="colorText">
+                      Astéroïdes en approche à partir du :&#141;
+                      {date}
+                    </h2>
                   </div>
-                ) : null}
-              </div>
+                  <NeoDisplay data={data} displayAlert={displayAlert} showAlert={this.showAlert} />
+                  <p className="color">Distance minimale relevée</p>
+                </div>
+              ) : null}
+            </div>
 
-              {isPeriodeChecked ? (
-                <Calend
-                  reset={this.reset}
-                  handleCheckedButton={this.handleCheckedButton}
-                  ButtonActive="isPeriodeChecked"
-                />
-              ) : null}
-              {isCloserChecked || isBiggerChecked || isDangerousChecked ? (
-                <MonthsCalendar dataMethod={this.setData} />
-              ) : null}
-            </Route>
-          </Switch>
-        </Router>
-      </div>
+            {isPeriodeChecked ? (
+              <Calend
+                reset={this.reset}
+                handleCheckedButton={this.handleCheckedButton}
+                ButtonActive="isPeriodeChecked"
+              />
+            ) : null}
+            {isCloserChecked || isBiggerChecked || isDangerousChecked ? (
+              <MonthsCalendar dataMethod={this.setData} />
+            ) : null}
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }
